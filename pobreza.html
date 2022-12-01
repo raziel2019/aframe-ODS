@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobreza</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="js/app.js"> </script>
+</head>
+<body>
+    <a-scene>
+<!-- Assets de escena-->
+        <a-assets>
+                <a-sound src="src: url(Assets/cancion-triste-1502.mp3)" autoplay="true"  loop="true" position="0 2 5"></a-sound>
+                <img src="Assets/alex-chybowsky-1438-winter-bluec.jpg" id="sky" alt="cielo">
+                <img id="previewDefault" alt="Menu" src="Assets/menu.png">
+                <img id="ods1video" alt="Pobreza" src="Assets/ODS1-video.png">
+                <a-asset-item id="scene-proverty" src="Assets/scene.gltf"> </a-asset-item>
+        </a-assets>
+    
+        <!-- Sky -->
+    
+        <a-sky src="#sky"></a-sky>
+
+    <!-- Camera -->
+    
+    <a-entity camera="" 
+              raycaster="far: 100; objects: [link]; direction: -0.5424504792694357 0.3029184823555603 -0.7835737812023599; origin: 0 1.6 2; useWorldCoordinates: true" 
+              look-controls="" 
+              cursor="rayOrigin: mouse" 
+              wasd-controls="acceleration: 10" 
+              position="0.42595499211920584 0.77902 5.779287544499026"
+              rotation="-6.760901982543716 55.691497686716055 0" 
+              data-aframe-inspector-original-camera="" 
+              scale="" 
+              visible="false"></a-entity>
+
+    <a-entity gltf-model="#scene-proverty" class="scene-proverty" wasd-controls="acceleration:  0.51"> </a-entity>
+    
+
+
+    <a-link	position="-0.464 0.812 5.497" rotation="2.663 -95.878 7.055"
+	href="index.html" scale="0.2 0.2 0.2" title="Menu" image="#previewDefault"></a-link>
+    
+    <a-link	position="0.498 1.014 5.019" rotation="11.572 -6.370 6.054"
+	href="ods1.html" scale="0.2 0.2 0.2" title="Pobreza" image="#ods1video"></a-link>
+
+</a-scene>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteors / Raciel Hernandez</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="js/app.js"> </script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+    
+    <a-scene>
+        <!-- ASSETS IMAGENES Y AUDIO-->
+        <a-assets>
+               <a-sound src="src: url(Assets/kids-117853.mp3)" autoplay="true"  loop="true" position="0 2 5"></a-sound>
+               <a-asset-item id="pobreza" src="Assets/ODS1.gltf"></a-asset-item>
+               <a-asset-item id="hambre" src="/Assets/ODS2.gltf"></a-asset-item>
+               <a-asset-item id="salud" src="/Assets/ODS3.gltf"></a-asset-item>
+               <a-asset-item id="educacion" src="/Assets/ODS4.gltf"></a-asset-item>
+               <a-asset-item id="genero" src="/Assets/ODS5.gltf"></a-asset-item>
+               <a-asset-item id="agua" src="/Assets/ODS6.gltf"></a-asset-item>
+               <a-asset-item id="energia" src="/Assets/ODS7.gltf"></a-asset-item>
+               <a-asset-item id="trabajo" src="/Assets/ODS8.gltf"></a-asset-item>
+               <a-asset-item id="industria" src="/Assets/ODS9.gltf"></a-asset-item>
+               <a-asset-item id="desigualdades" src="/Assets/ODS10.gltf"></a-asset-item>
+               <a-asset-item id="ciudades" src="/Assets/ODS11.gltf"></a-asset-item>
+               <a-asset-item id="produccion" src="/Assets/ODS12.gltf"></a-asset-item>
+               <a-asset-item id="clima" src="/Assets/ODS13.gltf"></a-asset-item>
+               <a-asset-item id="submarina" src="/Assets/ODS14.gltf"></a-asset-item>
+               <a-asset-item id="vida" src="/Assets/ODS15.gltf"></a-asset-item>
+               <a-asset-item id="paz" src="/Assets/ODS16.gltf"></a-asset-item>
+               <a-asset-item id="alianzas" src="/Assets/ODS17.gltf"></a-asset-item>
+               <a-asset-item id="portada" src="/Assets/ODSPortada.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity camera=""  raycaster=" objects: .ODS1" look-controls cursor="rayOrigin: mouse" wasd-controls="acceleration:100" position="0 1.6 0"></a-entity>
+       
+        <a-entity environment="preset: forest; groundColor: #445; grid: cross"> 
+                <a-entity class="ODS1" link="href: /pobreza.html;" gltf-model="#pobreza" position="-5.86417 1.1 -8.023" begin="click"></a-entity>
+                <a-entity gltf-model="#hambre" position="-3.16201 1.1 -8.02291"></a-entity>
+                <a-entity gltf-model="#salud" position="-0.5605 1.1 -8.023"></a-entity>
+                <a-entity gltf-model="#educacion" position="1.82291 1.1 -8.023"></a-entity>
+                <a-entity gltf-model="#genero" position="4.30374 1.1 -8.023"></a-entity>    
+                <a-entity gltf-model="#agua" position="7.06314 1.1 -8.023"></a-entity>
+                <a-entity gltf-model="#energia" position="7.063 3.36536 -8.043"></a-entity>
+                <a-entity gltf-model="#trabajo" position="4.304 3.365 -8.043"></a-entity>
+                <a-entity gltf-model="#industria" position="1.823 3.365 -8.043"></a-entity>
+                <a-entity gltf-model="#desigualdades" position="-0.56 3.365 -8.043"></a-entity>
+                <a-entity gltf-model="#ciudades" position="-3.162 3.365 -8.043"></a-entity>
+                <a-entity gltf-model="#produccion" position="-5.864 3.365 -8.053"></a-entity>
+                <a-entity gltf-model="#clima" position="-5.9733 5.516 -8.053"></a-entity>
+                <a-entity gltf-model="#submarina" position="-3.162 5.516 -8.043"></a-entity>
+                <a-entity gltf-model="#vida" position="-0.55 5.516 -8.043"></a-entity>
+                <a-entity gltf-model="#paz" position="1.823 5.516 -8.043"></a-entity>
+                <a-entity gltf-model="#alianzas" position="4.304 5.51625 -8.043"></a-entity>
+                <a-entity gltf-model="#portada" position="7.063 5.516 -8.043"></a-entity>
+
+               
+
+        </a-entity>
+    </a-scene>
+
+
+</body>
+</html>
