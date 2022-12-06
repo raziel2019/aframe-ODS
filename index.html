@@ -34,12 +34,12 @@
                <a-asset-item id="alianzas" src="/Assets/ODS17.gltf"></a-asset-item>
                <a-asset-item id="portada" src="/Assets/ODSPortada.gltf"></a-asset-item>
         </a-assets>
-        <a-entity camera=""  raycaster=" objects: .ODS1" look-controls cursor="rayOrigin: mouse" wasd-controls="acceleration:100" position="0 1.6 0"></a-entity>
+        <a-entity camera=""  raycaster=" objects: .ODS1, .ODS3" look-controls cursor="rayOrigin: mouse" wasd-controls="acceleration:100" position="0 1.6 0"></a-entity>
        
         <a-entity environment="preset: forest; groundColor: #445; grid: cross"> 
                 <a-entity class="ODS1" link="href: /pobreza.html;" gltf-model="#pobreza" position="-5.86417 1.1 -8.023" begin="click"></a-entity>
                 <a-entity gltf-model="#hambre" position="-3.16201 1.1 -8.02291"></a-entity>
-                <a-entity gltf-model="#salud" position="-0.5605 1.1 -8.023"></a-entity>
+                <a-entity class="ODS3" gltf-model="#salud"  link="href: /ods3.html;" position="-0.5605 1.1 -8.023"></a-entity>
                 <a-entity gltf-model="#educacion" position="1.82291 1.1 -8.023"></a-entity>
                 <a-entity gltf-model="#genero" position="4.30374 1.1 -8.023"></a-entity>    
                 <a-entity gltf-model="#agua" position="7.06314 1.1 -8.023"></a-entity>

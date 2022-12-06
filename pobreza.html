@@ -5,11 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pobreza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
-    <script src="js/app.js"> </script>
+    <script src="js/app.js"> </script>   
 </head>
 <body>
+    <style>
+        .offcanvas{
+            width: 100% !important;
+            background: transparent !important;
+        }
+        .offcanvas-title {
+            margin-bottom: 0;
+            line-height: 4.5;
+            color: white;
+        }
+        .offcanvas-body {
+            flex-grow: 1;
+            padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+            overflow-y: auto;
+            color: white;
+        }
+        .offcanvas-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+        .offcanvas-body {
+            flex-grow: 1;
+            padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+            overflow-y: auto;
+            color: white;
+            padding-right: 15%;
+            padding-left: 11%;
+            text-align: justify;
+        }
+    </style>
+     <div class="col-md-12 bg-light text-right">
+    <button style="
+            position: relative;
+            top: 10px;
+            left: 2px;
+            z-index: 10000000 !important; 
+            color: white;
+            float: right;
+            padding-right: 4%;
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;" 
+            class="btn btn-success" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasRight" 
+            aria-controls="offcanvasRight">Saber mas</button>
+        </div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Aprende sobre este objetivo</h5>
+    <button type="button"  class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
+  </div>
+  <div class="offcanvas-body">
+    A nivel mundial, el número de personas que viven en situación de extrema pobreza disminuyó desde un 36 % en 1990 hasta un 10 % en 2015. No obstante, el ritmo al que se produce este cambio está disminuyendo, y la crisis de la COVID-19 pone en riesgo décadas de progreso en la lucha contra la pobreza. Una nueva investigación publicada por el Instituto Mundial de Investigaciones de Economía del Desarrollo de la Universidad de las Naciones Unidas advierte de que las consecuencias económicas de la pandemia mundial podrían incrementar la pobreza en todo el mundo hasta llegar a afectar a 500 millones de personas más, o lo que es lo mismo, a un 8 % más de la población total mundial. Esta sería la primera vez que la pobreza aumente en todo el mundo en 30 años, desde 1990.
+  </div>
+</div>
     <a-scene>
 <!-- Assets de escena-->
         <a-assets>
@@ -17,6 +79,7 @@
                 <img src="Assets/alex-chybowsky-1438-winter-bluec.jpg" id="sky" alt="cielo">
                 <img id="previewDefault" alt="Menu" src="Assets/menu.png">
                 <img id="ods1video" alt="Pobreza" src="Assets/ODS1-video.png">
+                <img id="ods3" alt="ODS3" src="Assets/escenarioODS3.png">
                 <a-asset-item id="scene-proverty" src="Assets/scene.gltf"> </a-asset-item>
         </a-assets>
     
@@ -46,9 +109,14 @@
     
     <a-link	position="0.498 1.014 5.019" rotation="11.572 -6.370 6.054"
 	href="ods1.html" scale="0.2 0.2 0.2" title="Pobreza" image="#ods1video"></a-link>
+    
+    <a-link	position="1.036 0.969 5.019" rotation="11.572 -6.370 6.054"
+	href="ods3.html" scale="0.2 0.2 0.2" title="Bienestar" image="#ods3"></a-link>
+  
+      </a-entity>
 
 </a-scene>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

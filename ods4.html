@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteors / Raciel Hernandez</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="js/ods4/app.js"> </script>
+</head>
+<body>
+    
+    <a-scene cursor="rayOrigin:mouse" raycaster=" objects: .animacion">
+        <a-box position="-2.32826 0.71384 -1.88328" 
+               class="animacion" 
+               src="#ods3" 
+               audiohandler="" 
+               material="" 
+               geometry="" 
+               scale="0.6 0.6 0.6"
+               animation__rotation="property: rotation; from: 0 45 45; to: 360 405 45; dur: 1000; startEvents: click;">
+        </a-box>
+
+        <!-- ASSETS IMAGENES Y AUDIO-->
+        <a-assets >
+               <video id="video"  src="/Assets/videos/ODS 4 _ Educación de calidad.mp4"></video>
+               <img src="Assets/alex-chybowsky-1438-winter-bluec.jpg" id="sky" alt="cielo">
+               <img id="ods3" src="Assets/S-WEB-Goal-03.png" id="sky" alt="cielo">
+               <img id="ods1video" alt="Pobreza" src="Assets/ODS1-video.png">
+               <a-asset-item  id="Escuela" src="/scene/ods4/scene.gltf"></a-asset-item>
+               <a-asset-item  id="Profesor" src="/Characters/ods4/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity material="shader: flat; src: #video"
+                    geometry="primitive: plane; width: 1; height: 1;"
+                    position="-0.044 1.71494 -2.27681"  
+                    scale="3.73 1.59 1"
+                    rotation="0 0 0"
+                    play-on-click
+                    visible="false">
+        </a-entity>
+                <!-- Sky -->
+    
+                <a-sky src="#sky"></a-sky>
+
+
+
+
+        
+        <a-entity gltf-model="#Escuela" class="scene-Escuela" wasd-controls="acceleration:  0.51"> </a-entity>
+        <a-gltf-model position="2.29572 0.15 -2.718" scale="" src="#Profesor" animation-mixer="clip: ArmatureAction.001" gltf-model="/Characters/ods4/scene.gltf">
+        </a-gltf-model>
+        <a-entity camera="" position="0.0001364879338703631 1.6 2.56177" wasd-controls="" rotation="-14.667719555349075 2.6356058576017873 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+        <a-entity text="align: center; width: 60; wrapCount: 100; color: white; value: Click o tap para iniciar video" hide-on-play="#video" position="0 0.89062 -0.00505" scale="0.26 0.26 0.26">
+            <a-video src="#video" width="16" height="9" position="-0.12004 3.324 -10" material="" geometry="" scale="0.96 0.72 1"></a-video>        
+        </a-entity>
+</a-scene>
+
+</body>
+</html>
